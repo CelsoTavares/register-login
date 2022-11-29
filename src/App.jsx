@@ -61,6 +61,9 @@ function submit(){
         
     }else {
       alert('Parabéns, todos os dados foram cadastrados.')
+      name = ''
+      email = ''
+      password1 = ''
     }
  }
 
