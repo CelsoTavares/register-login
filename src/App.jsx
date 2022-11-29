@@ -5,7 +5,7 @@ function App() {
 
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
-  const [password1, setPassword] = useState()
+  const [password1, setPassword] = useState('')
   const [text, setText] = useState('password')
   const [eye, setEye] = useState('visible')
   
