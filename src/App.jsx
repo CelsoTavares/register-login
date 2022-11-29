@@ -143,6 +143,10 @@ function submit(){
           {!letterUppercase.test(password1) ?
           <p style={{color: '#e60000'}}>Password: Mínimo de uma letra maiúscula</p>
           :<p style={{color: 'green'}}>Password: Mínimo de uma letra maiúscula</p>}
+
+          {password1.length < 8 ?
+          <p style={{color: '#e60000'}}>Password: mínimo 8 caracteres</p>
+          :<p style={{color: 'green'}}>Password: mínimo 8 caracteres</p>}
             
         </div>
     </div> 
