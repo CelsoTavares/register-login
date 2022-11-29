@@ -33,19 +33,19 @@ function submit(){
       alert("Preencha todos os campos")
      
     }else if (name.length < 3) {
-      alert('Full name: Mínimo de 3 caracteres.')
+     alert('Full name: Mínimo de 3 caracteres.')
     
     }else if (email.length < 5) {
       alert('Email: Mínimo de 5 caracteres.')
     
     }else if (!conditionEmail.test(email)) {
-      alert(`Email: Use '@' e '.' .`)
+     alert(`Email: Use '@' e '.' .`)
 
     }else if(condition.test(password1)) {
-      alert('Password: Não use sequência.')
+     alert('Password: Não use sequência.')
 
     }else if(!character.test(password1)) {
-          alert('Password: Mínimo de 1 carácter especial.')
+     alert('Password: Mínimo de 1 carácter especial.')
 
     }else if (password1.length < 8) {
       alert('Password: mínimo de 8 caracteres.')
@@ -144,10 +144,6 @@ function submit(){
           <p style={{color: '#e60000'}}>Password: Mínimo de uma letra maiúscula</p>
           :<p style={{color: 'green'}}>Password: Mínimo de uma letra maiúscula</p>}
             
-          {password1.length < 8 ?
-          <p style={{color: '#e60000'}}>Password: mínimo 8 caracteres</p>
-          :<p style={{color: 'green'}}>Password: mínimo 8 caracteres</p>
-          }
         </div>
     </div> 
   );
