@@ -13,7 +13,7 @@ const condition = /[123]{3}|[abc|ABC]{3}/
 const conditionNumber = /[0-9]/ 
 const letterLowercase = /[a-z]/ 
 const letterUppercase = /[A-Z]/ 
-const character = /[@!?#$%-_^&=*()/+{}]/ 
+const character = /[@!?#$%^&=*/+]/  
 const conditionEmail = /[@]/
 
 function change() {
