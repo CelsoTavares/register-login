@@ -33,19 +33,19 @@ function submit(){
       alert("Preencha todos os campos")
      
     }else if (name.length < 3) {
-     alert('Full name: Mínimo de 3 caracteres.')
+      alert('Full name: Mínimo de 3 caracteres.')
     
     }else if (email.length < 5) {
       alert('Email: Mínimo de 5 caracteres.')
     
     }else if (!conditionEmail.test(email)) {
-     alert(`Email: Use '@' .`)
+      alert(`Email: Use '@' .`)
 
     }else if(condition.test(password1)) {
-     alert('Password: Não use sequência 123 ou abc.')
+      alert('Password: Não use sequência.')
 
     }else if(!character.test(password1)) {
-     alert('Password: Mínimo de 1 carácter especial.')
+      alert('Password: Mínimo de 1 carácter especial.')
 
     }else if (password1.length < 8) {
       alert('Password: Mínimo de 8 caracteres.')
@@ -60,10 +60,10 @@ function submit(){
       alert('Password: Mínimo de uma letra maiúscula.')
         
     }else {
-       setName('')
-       setEmail('')
-       setPassword('')
-       alert('Parabéns, todos os dados foram cadastrados.')
+      setEmail('')
+      setPassword('')
+      setName('')
+      alert('Parabéns, todos os dados foram cadastrados.')
     }
  }
 
@@ -120,8 +120,8 @@ function submit(){
           : <p style={{color: '#e60000'}}>Full name: Mínimo de 3 caracteres.</p>}
 
           {!conditionEmail.test(email) ? 
-          <p style={{color: '#e60000'}}>Email: Use " @ "</p> 
-          :<p style={{color: 'green'}}>Email: Use " @ "</p>}
+          <p style={{color: '#e60000'}}>Email: Use " @ " </p> 
+          :<p style={{color: 'green'}}>Email: Use " @ " </p>}
                       
           {email.length >= 5 ? 
           <p style={{color: 'green'}}>Email: Mínimo de 5 caracteres</p>
@@ -146,14 +146,14 @@ function submit(){
           {!letterUppercase.test(password1) ?
           <p style={{color: '#e60000'}}>Password: Mínimo de uma letra maiúscula</p>
           :<p style={{color: 'green'}}>Password: Mínimo de uma letra maiúscula</p>}
-
+            
           {password1.length < 8 ?
           <p style={{color: '#e60000'}}>Password: Mínimo de 8 caracteres</p>
           :<p style={{color: 'green'}}>Password: Mínimo de 8 caracteres</p>}
-            
         </div>
     </div> 
   );
 }
 
 export default App;
+
