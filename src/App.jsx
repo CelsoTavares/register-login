@@ -60,10 +60,10 @@ function submit(){
       alert('Password: Mínimo de uma letra maiúscula.')
         
     }else {
-      alert('Parabéns, todos os dados foram cadastrados.')
        setName('')
        setEmail('')
        setPassword('')
+       alert('Parabéns, todos os dados foram cadastrados.')
     }
  }
 
