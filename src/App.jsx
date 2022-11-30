@@ -3,11 +3,11 @@ import { useState } from 'react';
 
 function App() {
 
-  const [name, setName] = useState('')
-  const [email, setEmail] = useState('')
-  const [password1, setPassword] = useState('')
-  const [text, setText] = useState('password')
-  const [eye, setEye] = useState('visible')
+const [name, setName] = useState('')
+const [email, setEmail] = useState('')
+const [password1, setPassword] = useState('')
+const [text, setText] = useState('password')
+const [eye, setEye] = useState('visible')
   
 const condition = /[123]{3}|[abc|ABC]{3}/ 
 const conditionNumber = /[0-9]/ 
@@ -21,11 +21,11 @@ function change() {
   if(text === 'password') {
     setText('text') 
     setEye('invisible')
+  
   }else {
     setText('password')
     setEye('visible')
   }
- 
 }
 function submit(){
  
@@ -86,7 +86,7 @@ function submit(){
             value={name}
             onChange = {(e)=> setName(e.target.value)} 
             />
-          </div>
+            </div>
           
             <div className="emailIcon">
             <label htmlFor="emailClass"><ImMail/></label>
@@ -94,7 +94,7 @@ function submit(){
             value={email}
             onChange = {(e)=> setEmail(e.target.value)}
             />
-          </div>    
+            </div>    
           
            <div className="passwordIcon" >
            <label htmlFor="passwordClass"><ImKey/></label>
@@ -102,55 +102,55 @@ function submit(){
            value={password1}
            onChange = {(e)=> setPassword(e.target.value)}          
            />  
-        
           {eye === 'visible' ? <ImEyeBlocked onClick={change} /> : <ImEye onClick={change} />}
-         
           </div>  
 
           <button type="submit"  onClick={submit}>Submit</button>
+        
         </div>
-        <div className="condition">
+          <div className="condition">
           
-          {name.length > 0 && email.length > 0 && password1.length > 0 ? 
-          <p style={{color: 'green'}}>Preencha todos os campos.</p>
-          : <p style={{color: '#e60000'}}>Preencha todos os campos.</p>}
+            {name.length > 0 && email.length > 0 && password1.length > 0 ? 
+            <p style={{color: 'green'}}>Preencha todos os campos.</p>
+            : <p style={{color: '#e60000'}}>Preencha todos os campos.</p>}
            
-          {name.length >= 3 ? 
-          <p style={{color: 'green'}}>Full name: Mínimo de 3 caracteres.</p>
-          : <p style={{color: '#e60000'}}>Full name: Mínimo de 3 caracteres.</p>}
+            {name.length >= 3 ? 
+            <p style={{color: 'green'}}>Full name: Mínimo de 3 caracteres.</p>
+            : <p style={{color: '#e60000'}}>Full name: Mínimo de 3 caracteres.</p>}
 
-          {!conditionEmail.test(email) ? 
-          <p style={{color: '#e60000'}}>Email: Use " @ " </p> 
-          :<p style={{color: 'green'}}>Email: Use " @ " </p>}
+            {!conditionEmail.test(email) ? 
+            <p style={{color: '#e60000'}}>Email: Use " @ " </p> 
+            : <p style={{color: 'green'}}>Email: Use " @ " </p>}
                       
-          {email.length >= 5 ? 
-          <p style={{color: 'green'}}>Email: Mínimo de 5 caracteres</p>
-          :<p style={{color: '#e60000'}}>Email: Mínimo de 5 caracteres</p>}
+            {email.length >= 5 ? 
+            <p style={{color: 'green'}}>Email: Mínimo de 5 caracteres</p>
+            : <p style={{color: '#e60000'}}>Email: Mínimo de 5 caracteres</p>}
            
-          {!conditionNumber.test(password1) ?
-          <p style={{color: '#e60000'}}>Password: Mínimo de 1 número</p>
-          :<p style={{color: 'green'}}>Password: Mínimo de 1 número</p>}
+            {!conditionNumber.test(password1) ?
+            <p style={{color: '#e60000'}}>Password: Mínimo de 1 número</p>
+            : <p style={{color: 'green'}}>Password: Mínimo de 1 número</p>}
             
-          {condition.test(password1) ?
-          <p style={{color: '#e60000'}}>Password: Não use sequência 123 ou abc</p>
-          :<p style={{color: 'green'}}>Password: Não use sequência 123 ou abc</p>}
+            {condition.test(password1) ?
+            <p style={{color: '#e60000'}}>Password: Não use sequência 123 ou abc</p>
+            : <p style={{color: 'green'}}>Password: Não use sequência 123 ou abc</p>}
 
-          {!character.test(password1) ?
-          <p style={{color: '#e60000'}}>Password: Mínimo de um carácter especial</p>
-          :<p style={{color: 'green'}}>Password: Mínimo de um carácter especial</p>}
+            {!character.test(password1) ?
+            <p style={{color: '#e60000'}}>Password: Mínimo de um carácter especial</p>
+            : <p style={{color: 'green'}}>Password: Mínimo de um carácter especial</p>}
 
-          {!letterLowercase.test(password1) ?
-          <p style={{color: '#e60000'}}>Password: Mínimo de uma letra minúscula</p>
-          :<p style={{color: 'green'}}>Password: Mínimo de uma letra minúscula</p>}
+            {!letterLowercase.test(password1) ?
+            <p style={{color: '#e60000'}}>Password: Mínimo de uma letra minúscula</p>
+            : <p style={{color: 'green'}}>Password: Mínimo de uma letra minúscula</p>}
 
-          {!letterUppercase.test(password1) ?
-          <p style={{color: '#e60000'}}>Password: Mínimo de uma letra maiúscula</p>
-          :<p style={{color: 'green'}}>Password: Mínimo de uma letra maiúscula</p>}
+            {!letterUppercase.test(password1) ?
+            <p style={{color: '#e60000'}}>Password: Mínimo de uma letra maiúscula</p>
+            : <p style={{color: 'green'}}>Password: Mínimo de uma letra maiúscula</p>}
             
-          {password1.length < 8 ?
-          <p style={{color: '#e60000'}}>Password: Mínimo de 8 caracteres</p>
-          :<p style={{color: 'green'}}>Password: Mínimo de 8 caracteres</p>}
-        </div>
+            {password1.length < 8 ?
+            <p style={{color: '#e60000'}}>Password: Mínimo de 8 caracteres</p>
+            : <p style={{color: 'green'}}>Password: Mínimo de 8 caracteres</p>}
+        
+          </div>
     </div> 
   );
 }
