@@ -42,13 +42,13 @@ function submit(){
      alert(`Email: Use '@' .`)
 
     }else if(condition.test(password1)) {
-     alert('Password: Não use sequência.')
+     alert('Password: Não use sequência 123 ou abc.')
 
     }else if(!character.test(password1)) {
      alert('Password: Mínimo de 1 carácter especial.')
 
     }else if (password1.length < 8) {
-      alert('Password: mínimo de 8 caracteres.')
+      alert('Password: Mínimo de 8 caracteres.')
     
     }else if(!conditionNumber.test(password1)) {
       alert('Password: Mínimo de 1 número.')
@@ -116,16 +116,16 @@ function submit(){
           : <p style={{color: '#e60000'}}>Preencha todos os campos.</p>}
            
           {name.length >= 3 ? 
-          <p style={{color: 'green'}}>Full name: Mínimo 3 caracteres.</p>
-          : <p style={{color: '#e60000'}}>Full name: Mínimo 3 caracteres.</p>}
+          <p style={{color: 'green'}}>Full name: Mínimo de 3 caracteres.</p>
+          : <p style={{color: '#e60000'}}>Full name: Mínimo de 3 caracteres.</p>}
 
           {!conditionEmail.test(email) ? 
           <p style={{color: '#e60000'}}>Email: Use " @ "</p> 
           :<p style={{color: 'green'}}>Email: Use " @ "</p>}
                       
           {email.length >= 5 ? 
-          <p style={{color: 'green'}}>Email: Mínimo 5 caracteres</p>
-          :<p style={{color: '#e60000'}}>Email: Mínimo 5 caracteres</p>}
+          <p style={{color: 'green'}}>Email: Mínimo de 5 caracteres</p>
+          :<p style={{color: '#e60000'}}>Email: Mínimo de 5 caracteres</p>}
            
           {!conditionNumber.test(password1) ?
           <p style={{color: '#e60000'}}>Password: Mínimo de 1 número</p>
@@ -148,8 +148,8 @@ function submit(){
           :<p style={{color: 'green'}}>Password: Mínimo de uma letra maiúscula</p>}
 
           {password1.length < 8 ?
-          <p style={{color: '#e60000'}}>Password: mínimo 8 caracteres</p>
-          :<p style={{color: 'green'}}>Password: mínimo 8 caracteres</p>}
+          <p style={{color: '#e60000'}}>Password: Mínimo de 8 caracteres</p>
+          :<p style={{color: 'green'}}>Password: Mínimo de 8 caracteres</p>}
             
         </div>
     </div> 
