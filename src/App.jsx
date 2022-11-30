@@ -14,7 +14,7 @@ const conditionNumber = /[0-9]/
 const letterLowercase = /[a-z]/ 
 const letterUppercase = /[A-Z]/ 
 const character = /[@!?#$%-_^&=*()/+{}]/ 
-const conditionEmail = /[@.]/
+const conditionEmail = /[@]/
 
 function change() {
   
@@ -39,7 +39,7 @@ function submit(){
       alert('Email: Mínimo de 5 caracteres.')
     
     }else if (!conditionEmail.test(email)) {
-     alert(`Email: Use '@' e '.' .`)
+     alert(`Email: Use '@' .`)
 
     }else if(condition.test(password1)) {
      alert('Password: Não use sequência.')
@@ -120,8 +120,8 @@ function submit(){
           : <p style={{color: '#e60000'}}>Full name: Mínimo 3 caracteres.</p>}
 
           {!conditionEmail.test(email) ? 
-          <p style={{color: '#e60000'}}>Email: Use " @ " use " . "</p> 
-          :<p style={{color: 'green'}}>Email: Use " @ " use " . "</p>}
+          <p style={{color: '#e60000'}}>Email: Use " @ "</p> 
+          :<p style={{color: 'green'}}>Email: Use " @ "</p>}
                       
           {email.length >= 5 ? 
           <p style={{color: 'green'}}>Email: Mínimo 5 caracteres</p>
