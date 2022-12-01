@@ -75,7 +75,7 @@ function submit(){
       <div className="container">
 
         <h1>Register</h1>
-        <hr></hr>
+        <hr/>
 
         <h3 className="register">Register</h3>
         <h3 className="sign">Sign in</h3>
