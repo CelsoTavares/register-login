@@ -37,6 +37,7 @@ Users must be able to:
 - Vite
 - React js
 - React icons
+- Regex
 - Javascript
 
 ### Useful resources
