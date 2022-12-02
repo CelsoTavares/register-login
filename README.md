@@ -18,7 +18,7 @@ User registration with validation fields, whenever a requirement is met, the req
 
 Users must be able to:
 
-- See the optimal layout for the application depending on the device screen size
+- See the optimal layout for the application depending on the device screen size.
 - All buttons and inputs have a cursor.
 - On hover, buttons have a hover state.
 - All icons are linked to their entries.
